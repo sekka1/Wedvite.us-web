@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<title>WedVite</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="public/slider/images/apple-touch-icon.png">
+
+	<!-- jQuery (required) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+
+	<link rel="stylesheet" href="public/slider/css/page.css">
+
+        <link rel="stylesheet" href="public/style.css">
+
+	<!-- Anything Slider -->
+	<link rel="stylesheet" href="public/slider/css/anythingslider.css">
+	<script src="public/slider/js/jquery.anythingslider.js"></script>
+
+	<!-- AnythingSlider optional extensions -->
+	<!-- <script src="js/jquery.anythingslider.fx.js"></script> -->
+	<!-- <script src="js/jquery.anythingslider.video.js"></script> -->
+
+	<!-- Define slider dimensions here -->
+	<style>
+	#slider { width: 320px; height:480px; }
+	</style>
+
+	<!-- AnythingSlider initialization -->
+	<script>
+		// DOM Ready
+		$(function(){
+			$('#slider').anythingSlider({
+                            startPanel:1,
+                            buildNavigation:false,
+                            autoPlay:true
+                        });
+		});
+	</script>
+
+	<!-- Older IE stylesheet, to reposition navigation arrows, added AFTER the theme stylesheet -->
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" href="css/anythingslider-ie.css" type="text/css" media="screen" />
+	<![endif]-->
+
+<!-- Google + One -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<!-- Facebook Like -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=183563155046751";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</head>
+
+<body id="bod">
+
+    <div id="fb-root"></div>
+<!--
+     <div id="header">
+            <p class="header"><img clas="header" src="/public/heart_logo57x50.png"/>&nbsp;&nbsp;WedVite</p>
+    </div>
+-->
+    <div id="container">
+
+        <div id="leftside">
+
+            <img clas="header" width="128" height="128" src="/public/wedvite_logo.png"/>
+
+            <h2>Helps you socialize your wedding like never before!</h2>
+
+            <p class="maintext">The Wedvite Wedding App offers wedding couples the ability to share their special day with friends and families. Its like a mobile wedding invitation and social networking app for your wedding!</p>
+
+            <!--Apple App Store button-->
+            <a href="http://itunes.apple.com/us/app/wedvite/id457757757?ls=1&mt=8"><img src="http://www.magicgiftbag.com/public/gift/img/appstore.gif"/></a>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <br/><br/><br/>
+
+            <!--FB Like-->
+            <a class="fblink" href="http://www.facebook.com/apps/application.php?id=197440486945083">Visit us on Facebook</a><br/>
+            <div class="fb-like" data-href="http://www.wedvite.us/" data-send="true" data-layout="button_count" data-width="150" data-show-faces="false"></div>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <!--Google +1-->
+            <div class="g-plusone"></div>
+
+        </div>
+
+        <div id="rightside">
+
+    	        <!-- Simple AnythingSlider -->
+
+	        <ul id="slider">
+
+		    <li><img src="/public/screen-shots/home-screen.png" alt=""></li>
+
+		    <li><img src="/public/screen-shots/photo-album.png" alt=""></li>
+
+		    <li><img src="/public/screen-shots/wedding-info.png" alt=""></li>
+
+		    <li><img src="/public/screen-shots/zgift-registy.png" alt=""></li>
+
+                    <li><img src="/public/screen-shots/location-base-search.png" alt=""></li>
+
+                    <li><img src="/public/screen-shots/comment.png" alt=""></li>
+
+	        </ul>
+
+	        <!-- END AnythingSlider -->
+    
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,345 @@
+/*CSS RESET*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,details,figcaption,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,summary,time{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align: baseline;background:transparent;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, output, section, summary{display:block;}meter,progress,mark, time{display:inline;}ol, ul {list-style: none;}blockquote,q{quotes: none;}html,body{height:100%;}img {border:0;vertical-align:top;text-align:left;}object{vertical-align:top;outline:none;}ul,ol{list-style:none;}table,table td{padding:0;border:none;border-collapse:collapse;}input,select,textarea{font-family:Arial, Helvetica, sans-serif;font-size:1em;vertical-align:middle;font-weight:normal;margin:0;padding:0;}textarea{overflow:auto;}
+
+/*GLOBAL*/
+html{min-width:980px;}
+body{background: url(../images/body-bg.png) #fff;font-family:Arial, Helvetica, sans-serif;font-size:100%;line-height:1em;color:#000;}
+
+body>.gwrap{
+	position:relative;
+	background: url(../images/bg-txtr.jpg) 50% 0 no-repeat;
+	height:100%;
+	min-height:750px;
+}
+
+.grass{
+	position:absolute;
+	left:0;right:0;top:0;bottom:0;
+	background: url(../images/grass.png) 0 100% repeat-x;
+}
+
+.inner-wrap{
+	width:980px;
+	margin:0 auto;
+	position:relative;
+}
+/*ELEMENTS*/
+a {color:#1199b6;outline:none;}
+a:hover{text-decoration:none;}
+
+h2{
+}
+
+.blue{
+	color:#1199b6;
+}
+
+p,.blo{
+	line-height:18px;
+	margin-bottom:18px;
+}
+.p3{
+	margin-bottom:27px;
+}
+.p1{
+	margin-bottom:9px;
+}
+
+h1{
+	position:absolute;
+	left:30px;
+	top:84px;
+}
+
+h1 a{
+	color:#2c373b;
+	font:72px/1.2em Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	letter-spacing:-4px;
+	display:block;
+	height:86px;
+}
+
+h1 .desc{
+	font:18px/1.2em Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	position:absolute;
+	left:26px;
+	top:68px;
+	height:28px;
+	display:block;
+}
+
+.soc{
+	position:absolute;
+	left:57px;
+	top:216px;
+}
+
+.soc li{
+	margin-bottom:4px;
+}
+
+footer{
+	height:44px;
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+	background:url(../images/footer-bg.png);
+}
+/*#content*/
+
+#content{
+	position:absolute;
+	left:280px;
+	top:35px;
+	display:none;
+}
+
+#content>dt,.pop-up-blocks h2{
+	width:640px;
+	height:54px;
+	padding-left:44px;
+	background: url(../images/nav-sprite.png) no-repeat 0 -158px;
+	position:relative;
+	font:26px/54px Arial, Helvetica, sans-serif;
+	color:#2c373b;
+}
+
+#content>dt{
+	cursor:pointer;
+}
+
+#content>dt.frst{
+	background-position:0 -52px;
+	height:52px;
+}
+#content>dt.last{
+	background-position:0 -212px;
+	height:51px;
+}
+
+#content>dt.last+dd{
+	background:url(../images/bottom-bg.png) 0 100% no-repeat;
+}
+
+#content>dt.active,#content>dt:hover{
+	background-position:0 -104px;
+}
+#content>dt.active.frst,#content>dt.frst:hover{
+	background-position:0 0;
+}
+#content>dt.last:hover{
+	background-position:0 100%;
+}
+
+#content>dt.last.active{
+	border-bottom:1px #c4d4d7 solid;
+	background-position:0 -104px;
+}
+
+#content>dt>span{
+	width:18px;
+	height:18px;
+	background:url(../images/arrows.png) 0 0 no-repeat;
+	position:absolute;
+	left:17px;
+	top:18px;
+}
+
+#content>dt.active>span{
+	background-position:0 100%;
+}
+
+#content>dd{
+	display:none;
+	width:682px;
+	margin:0 1px;
+	position:relative;
+	overflow:hidden;
+	background:#d9e3e5 url(../images/scroll-bg.png) 100% 10px no-repeat;
+	font:10px/18px Arial, Helvetica, sans-serif;
+	color:#2c373b;
+	text-transform:uppercase;
+}
+
+#content>dt:hover{
+	color:#fff;
+	z-index:1000;
+}
+
+.img-box-set dt,.img-box dt{
+	margin-right:22px;
+}
+
+.border-bottom{
+	border-bottom:1px #b6c8cc solid;
+	padding-bottom:14px;
+	margin-bottom:14px;
+}
+
+.color-wrap{
+	background:#d9e3e5 url(../images/scroll-bg.png) 100% 10px no-repeat;
+	position:absolute;
+	left:0;right:0;top:0;bottom:15px;
+}
+
+.pop-up-blocks{
+	display:none;
+}
+
+.pop-up-blocks .privacy{
+	width:684px;
+	height:647px;
+	background: url(../images/privacy-bg.png) no-repeat;
+	font:10px/18px Arial, Helvetica, sans-serif;
+	color:#2c373b;
+	text-transform:uppercase;
+	position:absolute;
+	left:280px;
+	top:35px;
+	z-index:100;
+}
+.pop-up-blocks .close{
+	position:absolute;
+	right:17px;
+	top:12px;
+	z-index:1000;
+	padding:10px;
+}
+
+.pop-up-blocks .privacy h2{
+	background:none;
+	width:auto;
+	z-index:5;
+}
+
+.pop-up-blocks .scroll{
+	width:614px;
+	height:528px;
+}
+/*footer>.privacy*/
+footer .privacy{
+	font:10px/44px Arial, Helvetica, sans-serif;
+	color:#7a8589;
+	text-transform:uppercase;
+	padding-left:18px;
+}
+/*forms css*/
+
+/*js css*/
+/*==========================================*/
+.scroll{
+	height:333px;
+	padding-left:20px;
+	padding-right:30px;
+	width:615px;
+}
+
+.jScrollPaneContainer {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	margin-top:24px;
+}
+
+.jScrollPaneTrack {
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+	top: 0;
+	height: 100%;
+}
+.jScrollPaneDrag {
+	position: absolute;
+	width:20px;
+	height:122px;
+	background: url(../images/shattle.png);
+	cursor: pointer;
+	overflow: hidden;
+}
+.jScrollPaneDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.jScrollPaneDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+a.jScrollArrowUp {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	text-indent: -2000px;
+	overflow: hidden;
+	/*background-color: #666;*/
+	height: 9px;
+}
+a.jScrollArrowUp:hover {
+	/*background-color: #f60;*/
+}
+
+a.jScrollArrowDown {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	right: 0;
+	text-indent: -2000px;
+	overflow: hidden;
+	/*background-color: #666;*/
+	height: 9px;
+}
+a.jScrollArrowDown:hover {
+	/*background-color: #f60;*/
+}
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
+	/*background-color: #f00;*/
+}
+
+/*additional classes*/
+
+.fleft,.fl{float:left;}
+.fright,.fr{float:right;}
+.fnone,.fn{float:none;}
+.col-1,.col-2,.col-3{float:left;}
+.alignright,.alr{text-align:right;}
+.aligncenter,.alc{text-align:center;}
+.wrapper{width:100%;overflow:hidden;}
+.clear{clear:both;}
+a.und,.und a{text-decoration:none;}
+a.und:hover,.und a:hover{text-decoration:underline;}
+.nocolor, .nocolor a{color:inherit;}
+.upc{text-transform:uppercase;}
+.extra-wrap{overflow:hidden;}
+.nopad{padding:0;}
+.nomar{margin:0;}
+
+/*custom boxes*/
+
+.list a{
+	font:10px/26px Arial, Helvetica, sans-serif;
+	background: url(../images/marker1.png) 0 50% no-repeat;
+	display:block;
+	padding-left:14px;
+	white-space:nowrap;
+}
+
+dl.address dd{text-align:right;clear:both;}
+dl.address dd span{float:left;}
+
+dl.img-box,.img-box-set dl,dl.img-box dd,.img-box-set dl dd{overflow:hidden;}
+dl.img-box dt,.img-box-set dl dt{float:left;}
+
+
+.tb6 {
+	border: 3px double #CCCCCC;
+	background-color: #EDF2F7;
+}

@@ -1,0 +1,108 @@
+<?php
+
+require '../public/src/facebook.php';
+
+// Create our Application instance (replace this with your appId and secret).
+$facebook = new Facebook(array(
+  'appId'  => '197440486945083',
+  'secret' => 'ac5377e0d6f60fc22219fd4ea79227ed',
+  'cookie' => true,
+  'api' => '9f5ce02dbfae587d63dfb5368fcebcf3',
+  'baseurl' => 'http://wedvite.us'
+));
+
+$facebook->setAccessToken($this->fb_session);
+
+
+// See if there is a user from a cookie
+$user = $facebook->getUser();
+
+if ($user) {
+  try {
+    // Proceed knowing you have a logged in user who's authenticated.
+    $user_profile = $facebook->api('/me');
+  } catch (FacebookApiException $e) {
+    echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
+    $user = null;
+  }
+}
+
+?>
+<!doctype html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <title>WedVite</title>
+    <style>
+      body {
+        font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
+      }
+      h1 a {
+        text-decoration: none;
+        color: #3b5998;
+      }
+      h1 a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+
+
+
+<!--
+<div id="fb-root"></div>
+<script>
+
+window.fbAsyncInit = function() {
+	FB.init({
+		appId: '<?php echo $facebook->getAppID() ?>',
+		cookie: true,
+		xfbml: true,
+		oauth: true
+	});
+
+	FB.Event.subscribe('auth.login', function(response) {
+		window.location.reload();
+	});
+
+	FB.Event.subscribe('auth.logout', function(response) {
+		window.location.reload();
+	});
+};
+
+(function() {
+	var e = document.createElement('script'); e.async = true;
+	e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+	document.getElementById('fb-root').appendChild(e);
+}());
+
+</script>
+-->
+<!-- For FB Comment Box -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+<?php if( $this->showView ): ?>
+
+<img src="http://<?php echo $this->server . ereg_replace( "__", "/", $this->image_url ); ?>"/><br/>
+
+<!-- FB Like Button -->
+<div>
+<div class="fb-like" data-href="http://<?php echo $this->server . ereg_replace( "__", "/", $this->image_url ); ?>" data-send="true" data-width="<?php echo $this->width ?>" data-show-faces="true"></div>
+</div>
+
+<!-- FB Comment Box -->
+<div class="fb-comments" data-href="http://<?php echo $this->server . ereg_replace( "__", "/", $this->image_url ); ?>" data-num-posts="5" data-width="<?php echo $this->width; ?>"></div>
+
+<?php endif ?>
+
+  </body>
+</html>

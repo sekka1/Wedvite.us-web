@@ -1,0 +1,2 @@
+Cufon.replace('h1,.pop-up-blocks .privacy h2', { fontFamily: 'Myriad Pro',textShadow:'1px 1px #fff'});
+Cufon.replace('#content>dt', { fontFamily: 'Myriad Pro',textShadow:'1px 1px #fff',hover:{color:'#fff'}});
